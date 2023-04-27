@@ -1,5 +1,6 @@
 # Build a Wake Word Detection model for Voice Assistant
 This is a Wake Word Detection model for Voice Assistant, which can detect/recognize user's voice (after trained), wake and response to user whenever a wake word from user's speech is detected.
+
 ***Wake Word: the word/command that used for wake the voice assistant up, ex: Hey Siri, Hey Google,...
 
 ## Running on native machine
