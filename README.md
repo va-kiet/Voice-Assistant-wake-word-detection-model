@@ -85,8 +85,10 @@ NOTE: the test response will just randomly play audio file in demo_voice/termina
 For one labeled file, I recorded about 100 times of my own voice saying the wake word "Hey Eva" (2 secconds each), then replicated it 70 times. For zero label, I recorded the surrounding sound, random speech from me and other people, split them in to files with 2 seconds lenght. Finally trained for 50 epochs with over 62.000 zero labeled and 7.000 one labeled audio files. I got these results:
 * Best test accuracy:
 <img src="img/final_result.png" height="50">
+
 * Classification Report:
 <img src="img/csf_report.png" height="500">
+
 ### Demo Result
 After running engine.py with optimized model, I saw that the model worked well, it could easily recognize my voice saying the wake word and response back, but it not perfect:
 * My wake word is "Hey Eva", the voice assistant will also wake up if I say something that sound similiar to the wake word such as "Hey Heva" or even just "Eva".
