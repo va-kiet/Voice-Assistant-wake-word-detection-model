@@ -5,7 +5,7 @@ This is a Wake Word Detection model for Voice Assistant, which can detect/recogn
 ### Dependencies
 * python3
 * portaudio (for recording with pyaudio to work)
-
+* using a linux/mac machine or wsl2 on windows (because torchaudio may not work on windows)
 ### pip packages
 `pip install -r requirements.txt` 
 
@@ -79,4 +79,5 @@ For more details make sure to visit these files to look at script arguments and 
     
 NOTE: the test response will just randomly play audio file in demo_voice/terminator (Terminator's voice), which was downloaded from https://www.soundboard.com/sb/Pappa
 
-*** This is a modified copy from a part of [Micheal Nguyen's AI Voice Assistant](https://github.com/LearnedVector/A-Hackers-AI-Voice-Assistant), license included.
+*** This is a modified copy from a part of [Michael Nguyen's AI Voice Assistant](https://github.com/LearnedVector/A-Hackers-AI-Voice-Assistant), license included.
+## Training result
