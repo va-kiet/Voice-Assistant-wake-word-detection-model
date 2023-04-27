@@ -87,7 +87,7 @@ NOTE: the test response will just randomly play audio file in demo_voice/termina
 ### Mel Frequency Cepstral Coefficients (MFCCs)
 In sound processing, the mel-frequency cepstrum (MFC) is a representation of the short-term power spectrum of a sound, based on a linear cosine transform of a log power spectrum on a nonlinear mel scale of frequency.
 
-Mel-frequency cepstral coefficients (MFCCs) are coefficients that collectively make up an MFC.[1] They are derived from a type of cepstral representation of the audio clip (a nonlinear "spectrum-of-a-spectrum"). The difference between the cepstrum and the mel-frequency cepstrum is that in the MFC, the frequency bands are equally spaced on the mel scale, which approximates the human auditory system's response more closely than the linearly-spaced frequency bands used in the normal spectrum. This frequency warping can allow for better representation of sound, for example, in audio compression that might potentially reduce the transmission bandwidth and the storage requirements of audio signals.
+Mel-frequency cepstral coefficients (MFCCs) are coefficients that collectively make up an MFC. They are derived from a type of cepstral representation of the audio clip (a nonlinear "spectrum-of-a-spectrum"). The difference between the cepstrum and the mel-frequency cepstrum is that in the MFC, the frequency bands are equally spaced on the mel scale, which approximates the human auditory system's response more closely than the linearly-spaced frequency bands used in the normal spectrum. This frequency warping can allow for better representation of sound, for example, in audio compression that might potentially reduce the transmission bandwidth and the storage requirements of audio signals.
 
 MFCCs are commonly derived as follows:
 
@@ -96,6 +96,8 @@ MFCCs are commonly derived as follows:
 * Take the logs of the powers at each of the mel frequencies.
 * Take the discrete cosine transform of the list of mel log powers, as if it were a signal.
 * The MFCCs are the amplitudes of the resulting spectrum.
+
+[Wikipedia](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum)
 
 <img src="img/mfcc.png" height="150">
 
