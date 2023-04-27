@@ -1,6 +1,6 @@
 # Build a Wake Word Detection model for Voice Assistant
 This is a Wake Word Detection model for Voice Assistant, which can detect/recognize user's voice (after trained), wake and response to user whenever a wake word from user's speech is detected.
-
+***Wake Word: the word/command that used to wake the voice assistant up, ex: Hey Siri, Hey Google,...
 ## Running on native machine
 ### Dependencies
 * python3
@@ -80,4 +80,15 @@ For more details make sure to visit these files to look at script arguments and 
 NOTE: the test response will just randomly play audio file in demo_voice/terminator (Terminator's voice), which was downloaded from https://www.soundboard.com/sb/Pappa
 
 *** This is a modified copy from a part of [Michael Nguyen's AI Voice Assistant](https://github.com/LearnedVector/A-Hackers-AI-Voice-Assistant), license included.
-## Training result
+## Running Result
+### Train & Test
+For one labeled file, I recorded about 100 times of my own voice saying the wake word "Hey Eva" (2 secconds each), then replicated it 70 times. For zero label, I recorded the surrounding sound, random speech from me and other people, split them in to files with 2 seconds lenght. Finally trained for 50 epochs with over 62.000 zero labeled and 7.000 one labeled audio files. I got these results:
+* Best test accuracy:
+![tess acc](img/final_result.png "Best Test Acc")
+* Classification Report:
+![Classification report](img/csf_report.png "Classification Report")
+### Demo Result
+After running engine.py with optimized model, I saw that the model worked well, it could easily recognize my voice saying the wake word and response back, but it not perfect:
+* My wake word is "Hey Eva", the voice assistant will also wake up if I say something that sound similiar to the wake word such as "Hey Heva" or even just "Eva".
+* The model is hard to work in a noisy environment
+* The voice assistant could wake up with your random speech/non-wake word (rarely occur)  
