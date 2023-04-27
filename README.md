@@ -1,6 +1,7 @@
 # Build a Wake Word Detection model for Voice Assistant
 This is a Wake Word Detection model for Voice Assistant, which can detect/recognize user's voice (after trained), wake and response to user whenever a wake word from user's speech is detected.
-***Wake Word: the word/command that used to wake the voice assistant up, ex: Hey Siri, Hey Google,...
+***Wake Word: the word/command that used for wake the voice assistant up, ex: Hey Siri, Hey Google,...
+
 ## Running on native machine
 ### Dependencies
 * python3
@@ -79,7 +80,24 @@ For more details make sure to visit these files to look at script arguments and 
     
 NOTE: the test response will just randomly play audio file in demo_voice/terminator (Terminator's voice), which was downloaded from https://www.soundboard.com/sb/Pappa
 
-*** This is a modified copy from a part of [Michael Nguyen's AI Voice Assistant](https://github.com/LearnedVector/A-Hackers-AI-Voice-Assistant), license included.
+*** The code was modified from a part of [Michael Nguyen's AI Voice Assistant](https://github.com/LearnedVector/A-Hackers-AI-Voice-Assistant), license included.
+
+## Data Processing Technique
+### Mel Frequency Cepstral Coefficients (MFCCs)
+In sound processing, the mel-frequency cepstrum (MFC) is a representation of the short-term power spectrum of a sound, based on a linear cosine transform of a log power spectrum on a nonlinear mel scale of frequency.
+
+Mel-frequency cepstral coefficients (MFCCs) are coefficients that collectively make up an MFC.[1] They are derived from a type of cepstral representation of the audio clip (a nonlinear "spectrum-of-a-spectrum"). The difference between the cepstrum and the mel-frequency cepstrum is that in the MFC, the frequency bands are equally spaced on the mel scale, which approximates the human auditory system's response more closely than the linearly-spaced frequency bands used in the normal spectrum. This frequency warping can allow for better representation of sound, for example, in audio compression that might potentially reduce the transmission bandwidth and the storage requirements of audio signals.
+
+MFCCs are commonly derived as follows:
+
+* Take the Fourier transform of (a windowed excerpt of) a signal.
+* Map the powers of the spectrum obtained above onto the mel scale, using triangular overlapping windows or alternatively, cosine overlapping windows.
+* Take the logs of the powers at each of the mel frequencies.
+* Take the discrete cosine transform of the list of mel log powers, as if it were a signal.
+* The MFCCs are the amplitudes of the resulting spectrum.
+
+<img src="img/mfcc.png" height="100">
+
 ## Running Result
 ### Train & Test
 For one labeled file, I recorded about 100 times of my own voice saying the wake word "Hey Eva" (2 secconds each), then replicated it 70 times. For zero label, I recorded the surrounding sound, random speech from me and other people, split them in to files with 2 seconds lenght. Finally trained for 50 epochs with over 62.000 zero labeled and 7.000 one labeled audio files. I got these results:
