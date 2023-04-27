@@ -98,10 +98,10 @@ class WakeWordEngine:
 class DemoAction:
     """This demo action will just randomly say Arnold Schwarzenegger quotes
 
-        args: sensitivty. the lower the number the more sensitive the
+        args: sensitivity. the lower the number the more sensitive the
         wakeword is to activation.
     """
-    def __init__(self, sensitivity):
+    def __init__(self, sensitivity=10):
         # import stuff here to prevent engine.py from 
         # importing unecessary modules during production usage
         import os
