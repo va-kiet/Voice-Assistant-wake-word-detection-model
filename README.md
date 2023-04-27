@@ -111,7 +111,8 @@ With the above configuration, the model contains 87249 parameters.
 
 ## Running Result
 ### Train & Test
-*After multiple times of training, I found that the best result can be obtained by distributing the data to 90/10 (90% for non-wake word, 10% for wake word).
+** After multiple times of training, I found that the best result can be obtained by distributing the data to 90/10 (90% for non-wake word, 10% for wake word).
+
 For one labeled file, I recorded about 100 times of my own voice saying the wake word "Hey Eva" (2 secconds each), then replicated it 70 times. For zero label, I recorded the surrounding sound, random speech from me and other people, split them in to files with 2 seconds lenght. Finally trained for 50 epochs with over 62.000 zero labeled and 7.000 one labeled audio files. I got these results:
 * Best test accuracy:
 <img src="img/final_result.png" height="50">
