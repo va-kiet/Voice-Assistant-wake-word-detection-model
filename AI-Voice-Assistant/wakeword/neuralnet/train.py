@@ -172,7 +172,7 @@ if __name__ == "__main__":
     parser.add_argument('--no_cuda', action='store_true', default=False, help='disables CUDA training')
     parser.add_argument('--num_workers', type=int, default=1, help='number of data loading workers')
     parser.add_argument('--hidden_size', type=int, default=128, help='lstm hidden size')
-    parser.add_argument('--load_pretrain_model', type=str, default=None, required=False, help='load pre-trained model')
+    parser.add_argument('--load_pretrain_model', type=str, default=None, required=False, help='path to load a pretrain model to continue training')
 
     args = parser.parse_args()
 
