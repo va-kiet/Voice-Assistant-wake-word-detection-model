@@ -10,7 +10,7 @@ Objective: Build a Wake Word Detection model for Voice Assistant just by PyTorch
 * Build a binary classification RNN (LSTM variant) model.
 * Split collected data into train set and test set, then processing them before puting them to training phase along with the model.
 * Train and optimize the model, testing with demo script.
-* Try to put the model to 
+* Try to put the model into raspberry pi
 ## Data Processing Technique
 ### Mel Frequency Cepstral Coefficients (MFCCs)
 In sound processing, the mel-frequency cepstrum (MFC) is a representation of the short-term power spectrum of a sound, based on a linear cosine transform of a log power spectrum on a nonlinear mel scale of frequency.
