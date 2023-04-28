@@ -55,12 +55,16 @@ For one labeled file, I recorded about 100 times of my own voice saying the wake
 
 ### Demo Result
 After running engine.py with optimized model, I saw that the model worked well, it could easily recognize my voice saying the wake word and response back, but it not perfect, there are some pros and cons of the model:
+
 Pros:
+
 * Light weight
 * Good sensitivity
 * Short training time
 * Can easily train on CPU or Colab
+
 Cons:
+
 * The model is hard to work in a noisy environment
 * The voice assistant could wake up with user's random speech/non-wake word (rarely occur)  
 * If user said something similiar to the wake word, the voice assistant could also detect it as the wake word (ex: my wake word is "hey Eva", saying "hey Sheva" or even just "Eva" will also wake the assistant up)
